@@ -8,8 +8,8 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-* bundle exec rails db:seed
 * bin/rails db:migrate
+* bundle exec rails db:seed
 * rails s
 
 Things you may want to cover:

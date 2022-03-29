@@ -1,0 +1,21 @@
+<%= form_with(model: diagnostic) do |form| %>
+  <% if diagnostic.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(diagnostic.errors.count, "error") %> prohibited this diagnostic from being saved:</h2>
+      <ul>
+        <% diagnostic.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+
+  <div>
+    <%= form.label :symptoms, style: "display: block" %>
+    <%= form.text_field :symptoms %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

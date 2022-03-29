@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+<div class="container text-center">
+  <p><b>Symptoms:</b> <%= @interview.diagnostic.symptoms %></p>
+  <p><b>Doctor:</b> <%= @interview.doctor.name %></p>
+
+  <div class="mb-2">
+    <%#= link_to "Back to interviews", interviews_path, class: 'btn btn-primary' %>
+    <%= link_to "Destroy this interview", @interview, method: :delete, class: 'btn btn-danger' %>
+  </div>
+</div>

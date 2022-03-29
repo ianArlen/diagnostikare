@@ -1,0 +1,15 @@
+<h1>This is diagnostic</h1>
+
+<!-- Name input -->
+<%= form_with model:@diagnostic do |form| %>
+<div class="form-outline mb-4 w-50">
+    <%= form.label :symptom, "Here you can write your health problems" %>
+    <%= form.text_area :symptom, class:'form-control' %>
+    <%= form.file_field :photos, multiple: true %>
+    <%= form.submit 'Create', class: "btn btn-primary mt-4" %>
+</div>
+<% end %>
+
+<div>
+  <%= link_to "Back to diagnostics", diagnostics_path %>
+</div>

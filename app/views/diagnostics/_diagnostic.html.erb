@@ -1,0 +1,25 @@
+<div id="<%= dom_id diagnostic %>">
+  <div class="card text-center">
+    <div class="card-header">
+      Symptoms
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">This is the symptom you had</h5>
+      <p class="card-text"><%= diagnostic.symptoms %></p>
+      <div class="row mb-2">
+        <% if diagnostic.photos.attached? %>
+          <% diagnostic.photos.each do |photo| %>
+            <div class="col-md-4">
+              <div class="card mb-2">  
+                <%= image_tag photo, size: '300x200' %>
+              </div>
+            </div>
+          <% 
+          end 
+        end
+        %>
+      </div>
+      <a href="#" class="btn btn-primary">Read more</a>
+    </div>
+  </div>
+</div>

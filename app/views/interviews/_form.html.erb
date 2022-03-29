@@ -1,0 +1,25 @@
+<%= form_with(model: interview) do |form| %>
+  <% if interview.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(interview.errors.count, "error") %> prohibited this interview from being saved:</h2>
+
+      <ul>
+        <% interview.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row w-25 m-3">
+    <select class="form-select" name="interview[doctor_id]">
+      <% @doctores.each do |doctor| %>
+        <option value="<%= doctor.id%>"><%= doctor.name %></option>
+      <% end %>
+    </select>
+  </div>
+  <div>
+  <%= form.hidden_field :diagnostic_id, value: @diagnostic.id %>
+  <div>
+    <%= form.submit 'Create', class:'btn btn-primary' %>
+  </div>
+<% end %>

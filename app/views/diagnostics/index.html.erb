@@ -1,0 +1,39 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="d-flex justify-content-center">      
+        <h3>Diagnostics</h3>
+      </div>
+    </div>
+    <div class="col-sm">
+    </div>
+    <div class="col-sm">
+      <div class="d-flex justify-content-center">
+        <%= link_to "New diagnostic", new_diagnostic_path, class: "btn btn-secondary btn-lg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="diagnostikare" class="row mt-4">
+  <% @diagnostics.each do |diagnostic| %>
+  <div class="col-md-4 mb-4">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">This is a description of the symptom</h5>
+        <p class="card-text"><%= diagnostic.symptoms %></p>
+        <%= link_to "Show this diagnostic", diagnostic, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  </div>
+</div>
+
+
+<%= javascript_tag do %>
+  console.log('Pene')
+<% end %>
+

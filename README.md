@@ -8,12 +8,12 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Bundle install
-rails s
+* Bundle install
+* rails s
 
 Things you may want to cover:
 
-Register first
+* Register first
 http://localhost:3000/users/sign_up
-Log in
+* Log in
 http://localhost:3000/users/sign_in
